@@ -1,7 +1,8 @@
 #Как я запускал классификацию изображений на домашнем кластере Apache Ignite ML
+
 Я - студент университета, знаком с машинным обучением в рамках пройденного курса, есть
 интерес к современным кластерным технологиям, конкретно Apache Ignite. Возникла идея
-копнуть глубже, то есть немного разобраться с
+копнуть глубже, то есть немного разобраться с относительно не популярной (во всяком случае, в русскоязычном сегменте) библиотеки
 [Apache Ignite Machine Learning](https://ignite.apache.org/docs/latest/machine-learning/machine-learning#machine-learning).
 Под катом — история о том, как мне удалось запустить пример OneVsRestClassificationExample,
 сначала пример сам по себе, а потом его же на датасете
@@ -18,18 +19,18 @@
 Раздел [Getting Started](https://ignite.apache.org/docs/latest/machine-learning/machine-learning#getting-started)
 обещает быстрый страрт, ну я и пробую. Что-то идет не так
 
-		<скрин>
+![](https://habrastorage.org/webt/kv/po/qy/kvpoqyrz3dqumgh_sxvoanc1b6o.png) (скриншот)
 
-Начинаю гуглить, ведь я не один такой неудачный, наверное есть товарищи по несчастью
+Начинаю гуглить в поисках решения или хотя бы товарищей по несчастью
 — попадается на глаза статья
 [Как быстро загрузить большую таблицу в Apache Ignite через Key-Value API](https://habr.com/ru/post/526708/).
 В тексте все круто, как всегда, но при этом есть репозиторий с кодом.
-То, что нужно для новичка!
 
 Пробую клонировать/открыть в IntelliJ Idea/скомпилировать/выполнить, все работает.
 Почему-то [автор](@vtch) использует библиотеки из
 [GRIDGAIN Community Edition](https://www.gridgain.com/products/in-memory-computing-platform),
-заменяю на то же самое из APACHE Ignite, опять работает. Вот с этого можно стартовать.
+заменяю на то же самое из APACHE Ignite (у студентов, как известно, есть вполне обоснованная тяга к Open Source-проду,
+опять работает. Вот с этого можно стартовать.
 
 Положил в проект пример zaleslaw
 [OneVsRestClassificationExample](https://github.com/apache/ignite/blob/master/examples/src/main/java/org/apache/ignite/examples/ml/multiclass/OneVsRestClassificationExample.java),
