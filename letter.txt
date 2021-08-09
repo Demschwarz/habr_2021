@@ -1,0 +1,8 @@
+Всем привет, вопрос по Ignite ML 2.10. Пытаюсь запустить пример https://github.com/apache/ignite/blob/master/examples/src/main/java/org/apache/ignite/examples/ml/multiclass/OneVsRestClassificationExample.java в кластере из двух узлов. Что делаю:
+1. собрал проект, добавил зависимости в pom.xml для версии 2.10, пример запускается и работает на кластере из одного узла. Все ок;
+2. загрузил AI 2.10, запустил отдедьно стоящий узел, в конфиге указал ip адрес в TcpDiscoveryVmIpFinder, установил peerClassLoadingEnabled в true. Включается ок.
+3. добавляю второй узел в кластер, запуская jar из п.1. Получаю странное - на ноде из п.2 вылетает исключение 
+
+Failed to find class with given class loader for unmarshalling (make sure same versions of all classes are available on all nodes or enable peer-class-loading) [clsLdr=sun.misc.Launcher$AppClassLoader@55f96302, cls=org.apache.ignite.ml.dataset.impl.cache.util.DatasetAffinityFunctionWrapper]
+
+Как мне победить этот DatasetAffinityFunctionWrapper, если никаких собственных классов я не создавал и peerClassLoadingEnabled включал? Ну еще при запуске на обоих узлах написано ver. 2.10.0#20210310-sha1:bc24f6ba, то есть версии системных классов должны совпадать.
